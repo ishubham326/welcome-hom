@@ -1,0 +1,152 @@
+/*---------------Landing Page----------------*/
+/*---------------Global Styles---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  /*1rem=10px*/
+}
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+body::after {
+  content: "";
+  background: url("/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  opacity: 0.85;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+}
+.background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+$particleSize: 20vmin;
+$animationDuration: 20s;
+$amount: 20;
+
+.background span {
+  width: $particleSize;
+  height: $particleSize;
+  border-radius: $particleSize;
+  backface-visibility: hidden;
+  position: absolute;
+  z-index: -2;
+  animation-name: move;
+  animation-duration: $animationDuration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  $colors: (#583c87, #e45a84, #ffacac);
+  @for $i from 1 through $amount {
+    &:nth-child(#{$i}) {
+      color: nth($colors, random(length($colors)));
+      top: random(100) * 1%;
+      left: random(100) * 1%;
+      animation-duration: (random($animationDuration * 10) / 10) * 1s + 10s;
+      animation-delay: random(($animationDuration + 10s) * 10) / 10 * -1s;
+      transform-origin: (random(50) - 25) * 1vw (random(50) - 25) * 1vh;
+      $blurRadius: (random() + 0.5) * $particleSize * 0.5;
+      $x: if(random() > 0.5, -1, 1);
+      box-shadow: ($particleSize * 2 * $x) 0 $blurRadius currentColor;
+    }
+  }
+}
+@keyframes move {
+  100% {
+    transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+main {
+  width: 90%;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  z-index: 1;
+}
+h1 {
+  font-family: "Indie Flower", cursive;
+  font-size: 12rem;
+  font-weight: 100;
+  color: white;
+}
+
+#google {
+  width: 2rem;
+  position: absolute;
+  top: 6.5rem;
+  left: 2rem;
+
+  color: yellow;
+}
+form {
+  align-items: center;
+  margin: auto;
+  position: relative;
+}
+#button {
+  width: 5rem;
+  height: 50px;
+  background: url("/icon.png");
+  background-size: 1.5rem;
+  background-position: center;
+  position: absolute;
+  right: 0rem;
+  top: 5rem;
+  border: none;
+  background-repeat: no-repeat;
+
+  border-radius: 0 60px 60px 0;
+}
+#button:hover {
+  background-color: rgba(255, 255, 255, 0.363);
+  transition: background-color 0.1s ease-in-out;
+}
+#field {
+  width: 60rem;
+  height: 50px;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5rem 0rem;
+  border-radius: 60px;
+  border: none;
+  color: #5b3566;
+  padding: 0rem 5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+#bookmarks {
+  z-index: 2;
+  width: 80vh;
+  display: flex;
+  flex-shrink: 2;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.app {
+  width: 9rem;
+  height: 9rem;
+  background-color: #faf7f7;
+  background-position: center;
+  object-fit: cover;
+  overflow: hidden;
+  background-size: cover;
+  border-radius: 3rem;
+  margin: 1rem;
+  opacity: 1;
+}

@@ -1,0 +1,458 @@
+/*---------------Landing Page----------------*/
+/*---------------Global Styles---------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /*1rem=10px*/
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+body::after {
+  content: "";
+  background: url("/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  opacity: 0.85;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: -2;
+}
+
+.background {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+}
+
+.background span {
+  width: 20vmin;
+  height: 20vmin;
+  border-radius: 20vmin;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  z-index: -2;
+  -webkit-animation-name: move;
+          animation-name: move;
+  -webkit-animation-duration: 20s;
+          animation-duration: 20s;
+  -webkit-animation-timing-function: linear;
+          animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.background span:nth-child(1) {
+  color: #583c87;
+  top: 77%;
+  left: 65%;
+  -webkit-animation-duration: 18.1s;
+          animation-duration: 18.1s;
+  -webkit-animation-delay: -18.7s;
+          animation-delay: -18.7s;
+  -webkit-transform-origin: -16vw 18vh;
+          transform-origin: -16vw 18vh;
+  -webkit-box-shadow: -40vmin 0 11.03047vmin currentColor;
+          box-shadow: -40vmin 0 11.03047vmin currentColor;
+}
+
+.background span:nth-child(2) {
+  color: #ffacac;
+  top: 40%;
+  left: 50%;
+  -webkit-animation-duration: 18.7s;
+          animation-duration: 18.7s;
+  -webkit-animation-delay: -24.3s;
+          animation-delay: -24.3s;
+  -webkit-transform-origin: 21vw 5vh;
+          transform-origin: 21vw 5vh;
+  -webkit-box-shadow: -40vmin 0 8.43973vmin currentColor;
+          box-shadow: -40vmin 0 8.43973vmin currentColor;
+}
+
+.background span:nth-child(3) {
+  color: #583c87;
+  top: 26%;
+  left: 6%;
+  -webkit-animation-duration: 26.2s;
+          animation-duration: 26.2s;
+  -webkit-animation-delay: -29.1s;
+          animation-delay: -29.1s;
+  -webkit-transform-origin: -20vw 3vh;
+          transform-origin: -20vw 3vh;
+  -webkit-box-shadow: -40vmin 0 6.15011vmin currentColor;
+          box-shadow: -40vmin 0 6.15011vmin currentColor;
+}
+
+.background span:nth-child(4) {
+  color: #e45a84;
+  top: 25%;
+  left: 1%;
+  -webkit-animation-duration: 21.4s;
+          animation-duration: 21.4s;
+  -webkit-animation-delay: -6.8s;
+          animation-delay: -6.8s;
+  -webkit-transform-origin: -5vw 2vh;
+          transform-origin: -5vw 2vh;
+  -webkit-box-shadow: -40vmin 0 7.85536vmin currentColor;
+          box-shadow: -40vmin 0 7.85536vmin currentColor;
+}
+
+.background span:nth-child(5) {
+  color: #ffacac;
+  top: 14%;
+  left: 77%;
+  -webkit-animation-duration: 28.3s;
+          animation-duration: 28.3s;
+  -webkit-animation-delay: -13.8s;
+          animation-delay: -13.8s;
+  -webkit-transform-origin: 15vw -20vh;
+          transform-origin: 15vw -20vh;
+  -webkit-box-shadow: 40vmin 0 6.06746vmin currentColor;
+          box-shadow: 40vmin 0 6.06746vmin currentColor;
+}
+
+.background span:nth-child(6) {
+  color: #583c87;
+  top: 90%;
+  left: 86%;
+  -webkit-animation-duration: 27.3s;
+          animation-duration: 27.3s;
+  -webkit-animation-delay: -26s;
+          animation-delay: -26s;
+  -webkit-transform-origin: -17vw -10vh;
+          transform-origin: -17vw -10vh;
+  -webkit-box-shadow: 40vmin 0 13.56597vmin currentColor;
+          box-shadow: 40vmin 0 13.56597vmin currentColor;
+}
+
+.background span:nth-child(7) {
+  color: #e45a84;
+  top: 41%;
+  left: 79%;
+  -webkit-animation-duration: 12.6s;
+          animation-duration: 12.6s;
+  -webkit-animation-delay: -16.9s;
+          animation-delay: -16.9s;
+  -webkit-transform-origin: -10vw -3vh;
+          transform-origin: -10vw -3vh;
+  -webkit-box-shadow: 40vmin 0 14.13321vmin currentColor;
+          box-shadow: 40vmin 0 14.13321vmin currentColor;
+}
+
+.background span:nth-child(8) {
+  color: #e45a84;
+  top: 90%;
+  left: 97%;
+  -webkit-animation-duration: 28.5s;
+          animation-duration: 28.5s;
+  -webkit-animation-delay: -11.9s;
+          animation-delay: -11.9s;
+  -webkit-transform-origin: -10vw -24vh;
+          transform-origin: -10vw -24vh;
+  -webkit-box-shadow: 40vmin 0 6.59377vmin currentColor;
+          box-shadow: 40vmin 0 6.59377vmin currentColor;
+}
+
+.background span:nth-child(9) {
+  color: #ffacac;
+  top: 52%;
+  left: 15%;
+  -webkit-animation-duration: 17.7s;
+          animation-duration: 17.7s;
+  -webkit-animation-delay: -13s;
+          animation-delay: -13s;
+  -webkit-transform-origin: 19vw -15vh;
+          transform-origin: 19vw -15vh;
+  -webkit-box-shadow: -40vmin 0 11.89776vmin currentColor;
+          box-shadow: -40vmin 0 11.89776vmin currentColor;
+}
+
+.background span:nth-child(10) {
+  color: #583c87;
+  top: 98%;
+  left: 26%;
+  -webkit-animation-duration: 21.1s;
+          animation-duration: 21.1s;
+  -webkit-animation-delay: -28.9s;
+          animation-delay: -28.9s;
+  -webkit-transform-origin: -12vw -12vh;
+          transform-origin: -12vw -12vh;
+  -webkit-box-shadow: 40vmin 0 6.25009vmin currentColor;
+          box-shadow: 40vmin 0 6.25009vmin currentColor;
+}
+
+.background span:nth-child(11) {
+  color: #ffacac;
+  top: 15%;
+  left: 100%;
+  -webkit-animation-duration: 27.7s;
+          animation-duration: 27.7s;
+  -webkit-animation-delay: -18.1s;
+          animation-delay: -18.1s;
+  -webkit-transform-origin: -18vw -7vh;
+          transform-origin: -18vw -7vh;
+  -webkit-box-shadow: 40vmin 0 8.58759vmin currentColor;
+          box-shadow: 40vmin 0 8.58759vmin currentColor;
+}
+
+.background span:nth-child(12) {
+  color: #e45a84;
+  top: 28%;
+  left: 82%;
+  -webkit-animation-duration: 15.6s;
+          animation-duration: 15.6s;
+  -webkit-animation-delay: -29.2s;
+          animation-delay: -29.2s;
+  -webkit-transform-origin: 2vw 16vh;
+          transform-origin: 2vw 16vh;
+  -webkit-box-shadow: -40vmin 0 6.05777vmin currentColor;
+          box-shadow: -40vmin 0 6.05777vmin currentColor;
+}
+
+.background span:nth-child(13) {
+  color: #ffacac;
+  top: 52%;
+  left: 74%;
+  -webkit-animation-duration: 27.4s;
+          animation-duration: 27.4s;
+  -webkit-animation-delay: -21.2s;
+          animation-delay: -21.2s;
+  -webkit-transform-origin: -12vw -1vh;
+          transform-origin: -12vw -1vh;
+  -webkit-box-shadow: 40vmin 0 7.97733vmin currentColor;
+          box-shadow: 40vmin 0 7.97733vmin currentColor;
+}
+
+.background span:nth-child(14) {
+  color: #ffacac;
+  top: 39%;
+  left: 63%;
+  -webkit-animation-duration: 22.2s;
+          animation-duration: 22.2s;
+  -webkit-animation-delay: -16.3s;
+          animation-delay: -16.3s;
+  -webkit-transform-origin: -11vw 11vh;
+          transform-origin: -11vw 11vh;
+  -webkit-box-shadow: -40vmin 0 8.78357vmin currentColor;
+          box-shadow: -40vmin 0 8.78357vmin currentColor;
+}
+
+.background span:nth-child(15) {
+  color: #e45a84;
+  top: 41%;
+  left: 90%;
+  -webkit-animation-duration: 26.9s;
+          animation-duration: 26.9s;
+  -webkit-animation-delay: -4.7s;
+          animation-delay: -4.7s;
+  -webkit-transform-origin: 1vw -6vh;
+          transform-origin: 1vw -6vh;
+  -webkit-box-shadow: -40vmin 0 8.31148vmin currentColor;
+          box-shadow: -40vmin 0 8.31148vmin currentColor;
+}
+
+.background span:nth-child(16) {
+  color: #583c87;
+  top: 72%;
+  left: 86%;
+  -webkit-animation-duration: 20.8s;
+          animation-duration: 20.8s;
+  -webkit-animation-delay: -4s;
+          animation-delay: -4s;
+  -webkit-transform-origin: 19vw -9vh;
+          transform-origin: 19vw -9vh;
+  -webkit-box-shadow: -40vmin 0 8.11808vmin currentColor;
+          box-shadow: -40vmin 0 8.11808vmin currentColor;
+}
+
+.background span:nth-child(17) {
+  color: #e45a84;
+  top: 67%;
+  left: 81%;
+  -webkit-animation-duration: 25.3s;
+          animation-duration: 25.3s;
+  -webkit-animation-delay: -15.2s;
+          animation-delay: -15.2s;
+  -webkit-transform-origin: 25vw 7vh;
+          transform-origin: 25vw 7vh;
+  -webkit-box-shadow: -40vmin 0 5.47125vmin currentColor;
+          box-shadow: -40vmin 0 5.47125vmin currentColor;
+}
+
+.background span:nth-child(18) {
+  color: #e45a84;
+  top: 57%;
+  left: 92%;
+  -webkit-animation-duration: 26.5s;
+          animation-duration: 26.5s;
+  -webkit-animation-delay: -13.4s;
+          animation-delay: -13.4s;
+  -webkit-transform-origin: 22vw -9vh;
+          transform-origin: 22vw -9vh;
+  -webkit-box-shadow: 40vmin 0 8.79998vmin currentColor;
+          box-shadow: 40vmin 0 8.79998vmin currentColor;
+}
+
+.background span:nth-child(19) {
+  color: #ffacac;
+  top: 96%;
+  left: 34%;
+  -webkit-animation-duration: 19.9s;
+          animation-duration: 19.9s;
+  -webkit-animation-delay: -10.8s;
+          animation-delay: -10.8s;
+  -webkit-transform-origin: 2vw 21vh;
+          transform-origin: 2vw 21vh;
+  -webkit-box-shadow: -40vmin 0 9.10008vmin currentColor;
+          box-shadow: -40vmin 0 9.10008vmin currentColor;
+}
+
+.background span:nth-child(20) {
+  color: #583c87;
+  top: 25%;
+  left: 62%;
+  -webkit-animation-duration: 25.6s;
+          animation-duration: 25.6s;
+  -webkit-animation-delay: -15.7s;
+          animation-delay: -15.7s;
+  -webkit-transform-origin: -3vw -1vh;
+          transform-origin: -3vw -1vh;
+  -webkit-box-shadow: -40vmin 0 14.45488vmin currentColor;
+          box-shadow: -40vmin 0 14.45488vmin currentColor;
+}
+
+@-webkit-keyframes move {
+  100% {
+    -webkit-transform: translate3d(0, 0, 1px) rotate(360deg);
+            transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+@keyframes move {
+  100% {
+    -webkit-transform: translate3d(0, 0, 1px) rotate(360deg);
+            transform: translate3d(0, 0, 1px) rotate(360deg);
+  }
+}
+
+main {
+  width: 90%;
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  z-index: 1;
+}
+
+h1 {
+  font-family: "Indie Flower", cursive;
+  font-size: 12rem;
+  font-weight: 100;
+  color: white;
+}
+
+#google {
+  width: 2rem;
+  position: absolute;
+  top: 6.5rem;
+  left: 2rem;
+  color: yellow;
+}
+
+form {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: auto;
+  position: relative;
+}
+
+#button {
+  width: 5rem;
+  height: 50px;
+  background: url("/icon.png");
+  background-size: 1.5rem;
+  background-position: center;
+  position: absolute;
+  right: 0rem;
+  top: 5rem;
+  border: none;
+  background-repeat: no-repeat;
+  border-radius: 0 60px 60px 0;
+}
+
+#button:hover {
+  background-color: rgba(255, 255, 255, 0.363);
+  -webkit-transition: background-color 0.1s ease-in-out;
+  transition: background-color 0.1s ease-in-out;
+}
+
+#field {
+  width: 60rem;
+  height: 50px;
+  font-size: 1.8rem;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 5rem 0rem;
+  border-radius: 60px;
+  border: none;
+  color: #5b3566;
+  padding: 0rem 5rem;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+#bookmarks {
+  z-index: 2;
+  width: 80vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-negative: 2;
+      flex-shrink: 2;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.app {
+  width: 9rem;
+  height: 9rem;
+  background-color: #faf7f7;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  background-size: cover;
+  border-radius: 3rem;
+  margin: 1rem;
+  opacity: 1;
+}
+/*# sourceMappingURL=style.css.map */
