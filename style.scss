@@ -101,7 +101,7 @@ form {
   position: relative;
 }
 #button {
-  width: 5rem;
+  width: 6rem;
   height: 50px;
   background: url("/icon.png");
   background-size: 1.5rem;
@@ -111,7 +111,7 @@ form {
   top: 5rem;
   border: none;
   background-repeat: no-repeat;
-
+  filter: invert(0);
   border-radius: 0 60px 60px 0;
 }
 #button:hover {
@@ -127,8 +127,11 @@ form {
   border-radius: 60px;
   border: none;
   color: #5b3566;
-  padding: 0rem 5rem;
+  padding: 0rem 6rem;
   background-color: rgba(255, 255, 255, 0.25);
+}
+#field:focus {
+  box-shadow: 5px 5px 10px #573c8746;
 }
 #bookmarks {
   z-index: 2;
@@ -148,5 +151,8 @@ form {
   background-size: cover;
   border-radius: 3rem;
   margin: 1rem;
+  opacity: 0.9;
+}
+.app:hover {
   opacity: 1;
 }
